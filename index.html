@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krystell F. San Gabriel | Computer Engineer & IT Educator Portfolio</title>
+    <meta name="description" content="Official interactive portfolio of Krystell F. San Gabriel - Computer Engineer, IT Instructor, Systems Developer, TESDA Animation NC II Passer & CSE Professional. View live project demos, experience, and contact for hiring.">
+    <meta name="keywords" content="Krystell San Gabriel, Computer Engineer, IT Instructor, Systems Developer, QR Code Enrollment, Instructor Evaluation System, Philippines, Tayabas City">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Chart.js for interactive analytics simulator -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- QRCode.js for interactive QR code generator simulator -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+
+    <!-- Background Particle Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation Header -->
+    <header class="navbar-header" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="logo">
+                <span class="logo-accent">&lt;</span>Krystell<span class="logo-accent">/&gt;</span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link active"><i class="fa-solid fa-user"></i> About</a></li>
+                    <li><a href="#experience" class="nav-link"><i class="fa-solid fa-briefcase"></i> Experience</a></li>
+                    <li><a href="#projects" class="nav-link"><i class="fa-solid fa-laptop-code"></i> Projects</a></li>
+                    <li><a href="#skills" class="nav-link"><i class="fa-solid fa-layer-group"></i> Skills</a></li>
+                    <li><a href="#certifications" class="nav-link"><i class="fa-solid fa-award"></i> Credentials</a></li>
+                    <li><a href="#references" class="nav-link"><i class="fa-solid fa-id-card"></i> References</a></li>
+                    <li><a href="#contact" class="nav-link"><i class="fa-solid fa-paper-plane"></i> Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="btn btn-outline" id="btn-resume-preview">
+                    <i class="fa-solid fa-file-pdf"></i> Resume
+                </button>
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fa-solid fa-bolt"></i> Hire Me
+                </a>
+                <button class="mobile-toggle-btn" id="mobile-toggle" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="badge-status">
+                    <span class="pulse-dot"></span> Open for Freelance Projects & Career Opportunities
+                </div>
+                <h1 class="hero-title">
+                    Hello, I'm <br>
+                    <span class="text-gradient">Krystell F. San Gabriel</span>
+                </h1>
+                <h2 class="hero-subtitle">
+                    I am a <span class="typing-text" id="typing-element"></span><span class="cursor">|</span>
+                </h2>
+                <p class="hero-description">
+                    Dedicated Computer Engineering graduate and IT Educator specializing in information systems, software development, process optimization, and digital transformation solutions.
+                </p>
+
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary btn-lg">
+                        <i class="fa-solid fa-play"></i> Explore Works & Demos
+                    </a>
+                    <a href="#contact" class="btn btn-secondary btn-lg">
+                        <i class="fa-solid fa-envelope"></i> Get In Touch
+                    </a>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="quick-stats">
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="3">0</div>
+                        <div class="stat-label">National Certifications</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="5">0</div>
+                        <div class="stat-label">Systems & Projects Built</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="100">0</div>
+                        <div class="stat-label">% Commitment to Quality</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="avatar-card-wrapper">
+                    <div class="avatar-glow"></div>
+                    <div class="avatar-card">
+                        <img src="assets/formalpic.jpg" alt="Krystell F. San Gabriel" class="avatar-img">
+                        <div class="avatar-overlay">
+                            <span class="tech-tag"><i class="fa-solid fa-graduation-cap"></i> B.S. Computer Engineering</span>
+                            <span class="tech-tag"><i class="fa-solid fa-certificate"></i> TESDA NC II Passer</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Floating Badge Cards -->
+                    <div class="floating-badge badge-1">
+                        <i class="fa-solid fa-qrcode icon-cyan"></i>
+                        <div>
+                            <strong>MIS Developer</strong>
+                            <small>QR Student Systems</small>
+                        </div>
+                    </div>
+
+                    <div class="floating-badge badge-2">
+                        <i class="fa-solid fa-chalkboard-user icon-indigo"></i>
+                        <div>
+                            <strong>IT Educator</strong>
+                            <small>Instruction & Mentorship</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+        <div class="section-container">
+            <div class="section-header text-center">
+                <span class="section-tag">WHO I AM</span>
+                <h2 class="section-title">About & Professional Profile</h2>
+                <p class="section-subtitle">Bridging engineering fundamentals with software development and educational excellence</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card main-bio-card">
+                    <div class="bio-header">
+                        <i class="fa-solid fa-user-gear bio-icon"></i>
+                        <h3>Computer Engineer & IT Educator</h3>
+                    </div>
+                    <p class="bio-text">
+                        I am a detail-oriented <strong>Computer Engineering</strong> graduate from Southern Luzon State University (SLSU) with hands-on experience spanning information systems development, IT instruction, customer relations, and digital media production.
+                    </p>
+                    <p class="bio-text">
+                        Skilled in end-to-end system analysis, testing, database handling, and process optimization. I thrive in dynamic environments where technology meets real-world application — from engineering QR code-based institutional enrollment systems to training future IT professionals.
+                    </p>
+
+                    <div class="bio-details-list">
+                        <div class="bio-detail-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <strong>Location</strong>
+                                <span>Tayabas City, Quezon Province</span>
+                            </div>
+                        </div>
+                        <div class="bio-detail-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <span>talasangabriel@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="bio-detail-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <strong>Phone</strong>
+                                <span>0931-946-6985</span>
+                            </div>
+                        </div>
+                        <div class="bio-detail-item">
+                            <i class="fa-solid fa-language"></i>
+                            <div>
+                                <strong>Languages</strong>
+                                <span>English, Filipino</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-cards-column">
+                    <div class="info-box-card">
+                        <div class="box-icon icon-yellow"><i class="fa-solid fa-lightbulb"></i></div>
+                        <h4>Core Strengths</h4>
+                        <ul class="strength-list">
+                            <li><i class="fa-solid fa-check-circle"></i> Software & System Analysis</li>
+                            <li><i class="fa-solid fa-check-circle"></i> Database Handling & Process Optimization</li>
+                            <li><i class="fa-solid fa-check-circle"></i> Educational & Technical Instruction</li>
+                            <li><i class="fa-solid fa-check-circle"></i> Customer Relations & CRM Management</li>
+                            <li><i class="fa-solid fa-check-circle"></i> 2D Digital Animation & Media Production</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-box-card highlight-box">
+                        <div class="box-icon icon-blue"><i class="fa-solid fa-bullseye"></i></div>
+                        <h4>Career Objective</h4>
+                        <p>
+                            Eager to apply technical knowledge in computer engineering, system development, and IT management to contribute to innovative digital transformation projects for enterprise clients and organizations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Education Section -->
+    <section class="section experience-section" id="experience">
+        <div class="section-container">
+            <div class="section-header text-center">
+                <span class="section-tag">CAREER & EDUCATION</span>
+                <h2 class="section-title">Experience & Academic Journey</h2>
+                <p class="section-subtitle">A proven track record in education, systems development, and corporate customer relations</p>
+            </div>
+
+            <div class="timeline-wrapper">
+                <div class="timeline-tabs">
+                    <button class="timeline-tab active" data-tab="work-experience">
+                        <i class="fa-solid fa-briefcase"></i> Work Experience
+                    </button>
+                    <button class="timeline-tab" data-tab="education">
+                        <i class="fa-solid fa-graduation-cap"></i> Education
+                    </button>
+                </div>
+
+                <!-- Work Experience Tab Content -->
+                <div class="timeline-content active" id="work-experience">
+                    <div class="timeline-item">
+                        <div class="timeline-badge"><i class="fa-solid fa-chalkboard-user"></i></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="timeline-role">Diploma in Information Technology Instructor</h3>
+                                    <h4 class="timeline-company">Information Technology Department</h4>
+                                    <span class="timeline-location"><i class="fa-solid fa-location-dot"></i> Tayabas City, Quezon</span>
+                                </div>
+                                <span class="timeline-date"><i class="fa-solid fa-calendar-days"></i> 2025 – Present</span>
+                            </div>
+                            <ul class="timeline-points">
+                                <li>Delivered lectures and hands-on laboratory activities in core Information Technology subjects.</li>
+                                <li>Prepared comprehensive instructional materials, lab manuals, and assessments.</li>
+                                <li>Evaluated student performance, guided capstone projects, and mentored students in technical problem-solving.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-badge"><i class="fa-solid fa-laptop-code"></i></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="timeline-role">Management Information System (MIS) Intern</h3>
+                                    <h4 class="timeline-company">MIS Department — Institutional OJT</h4>
+                                    <span class="timeline-location"><i class="fa-solid fa-location-dot"></i> Lucban, Quezon</span>
+                                </div>
+                                <span class="timeline-date"><i class="fa-solid fa-calendar-days"></i> 2024</span>
+                            </div>
+                            <ul class="timeline-points">
+                                <li>Contributed to the development and implementation of a <strong>QR code–based student enrollment system</strong>.</li>
+                                <li>Gained practical experience in system analysis, software development, database handling, and process optimization.</li>
+                                <li>Supported institutional IT operations, database maintenance, and digital transformation initiatives.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-badge"><i class="fa-solid fa-headset"></i></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="timeline-role">BPO Sales Agent</h3>
+                                    <h4 class="timeline-company">Customer Operations & Lead Management</h4>
+                                    <span class="timeline-location"><i class="fa-solid fa-location-dot"></i> Tayabas City, Quezon</span>
+                                </div>
+                                <span class="timeline-date"><i class="fa-solid fa-calendar-days"></i> 2020 – 2023</span>
+                            </div>
+                            <ul class="timeline-points">
+                                <li>Handled inbound/outbound sales calls in a fast-paced corporate BPO environment.</li>
+                                <li>Exceeded sales targets, maintained CRM tools, and managed leads effectively.</li>
+                                <li>Delivered high customer satisfaction ratings while consistently meeting strict KPIs.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Tab Content -->
+                <div class="timeline-content" id="education">
+                    <div class="timeline-item">
+                        <div class="timeline-badge"><i class="fa-solid fa-university"></i></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="timeline-role">Bachelor of Science in Computer Engineering</h3>
+                                    <h4 class="timeline-company">Southern Luzon State University - Main Campus</h4>
+                                    <span class="timeline-location"><i class="fa-solid fa-location-dot"></i> Lucban, Quezon</span>
+                                </div>
+                                <span class="timeline-date"><i class="fa-solid fa-calendar-days"></i> 2021 – 2025</span>
+                            </div>
+                            <p class="timeline-desc">
+                                Specialized in computer architecture, embedded systems, software engineering, databases, and network administration.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-badge"><i class="fa-solid fa-school"></i></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="timeline-role">STEM Track | Senior & Junior Highschool</h3>
+                                    <h4 class="timeline-company">Luis Palad Integrated Highschool</h4>
+                                    <span class="timeline-location"><i class="fa-solid fa-location-dot"></i> Tayabas City, Quezon</span>
+                                </div>
+                                <span class="timeline-date"><i class="fa-solid fa-calendar-days"></i> 2015 – 2021</span>
+                            </div>
+                            <p class="timeline-desc">
+                                Science, Technology, Engineering, and Mathematics track background with high honors in analytical subjects.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-badge"><i class="fa-solid fa-book-open"></i></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="timeline-role">Elementary Education</h3>
+                                    <h4 class="timeline-company">Tayabas East Central School I</h4>
+                                </div>
+                                <span class="timeline-date"><i class="fa-solid fa-calendar-days"></i> 2009 – 2015</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Projects Showcase Section -->
+    <section class="section projects-section" id="projects">
+        <div class="section-container">
+            <div class="section-header text-center">
+                <span class="section-tag">PORTFOLIO & WORKS</span>
+                <h2 class="section-title">Interactive Works & Project Showcase</h2>
+                <p class="section-subtitle">Click on any project to launch the live interactive working simulator directly in your browser!</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="mis">MIS & Web Systems</button>
+                <button class="filter-btn" data-filter="education">IT & Analytics</button>
+                <button class="filter-btn" data-filter="animation">Animation & Media</button>
+                <button class="filter-btn" data-filter="bpo">BPO & CRM</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                
+                <!-- Project 1: QR Code Enrollment System -->
+                <div class="project-card" data-category="mis">
+                    <div class="project-img-wrapper">
+                        <img src="assets/qr-system.jpg" alt="QR Code Enrollment System" class="project-img">
+                        <div class="project-badge">MIS Department Highlight</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>QR Code Tech</span>
+                            <span>PHP & MySQL</span>
+                            <span>JavaScript</span>
+                            <span>System Analysis</span>
+                        </div>
+                        <h3 class="project-title">QR Code-Based Student Enrollment System</h3>
+                        <p class="project-desc">
+                            Automated enrollment system designed during MIS Internship. Features instant QR code student generation, rapid verification scanning, and automated database logging.
+                        </p>
+                        <div class="project-actions">
+                            <button class="btn btn-primary btn-sm open-modal-btn" data-project="qr-system">
+                                <i class="fa-solid fa-desktop"></i> Launch Live Simulator
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Instructor Evaluation System -->
+                <div class="project-card" data-category="education">
+                    <div class="project-img-wrapper">
+                        <img src="assets/instructor-eval.jpg" alt="Instructor Evaluation System" class="project-img">
+                        <div class="project-badge">Academic Web Platform</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>PHP</span>
+                            <span>Chart.js</span>
+                            <span>Student Portal</span>
+                            <span>Analytics</span>
+                        </div>
+                        <h3 class="project-title">Instructor Evaluation & Analytics Platform</h3>
+                        <p class="project-desc">
+                            Comprehensive web platform for evaluating faculty performance with automated score aggregation, interactive metric charts, and downloadable dean reports.
+                        </p>
+                        <div class="project-actions">
+                            <button class="btn btn-primary btn-sm open-modal-btn" data-project="eval-system">
+                                <i class="fa-solid fa-chart-line"></i> Launch Live Simulator
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: TESDA 2D Animation Showcase -->
+                <div class="project-card" data-category="animation">
+                    <div class="project-img-wrapper">
+                        <img src="assets/animation-showcase.jpg" alt="2D Animation Portfolio" class="project-img">
+                        <div class="project-badge">TESDA NC II Certification</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>TESDA NC II</span>
+                            <span>2D Animation</span>
+                            <span>Character Design</span>
+                            <span>Storyboarding</span>
+                        </div>
+                        <h3 class="project-title">2D Animation & Digital Media Portfolio</h3>
+                        <p class="project-desc">
+                            Creative showcase produced under the TESDA Animation NC II qualification. Includes character concept art, storyboard sequences, and keyframe animations.
+                        </p>
+                        <div class="project-actions">
+                            <button class="btn btn-primary btn-sm open-modal-btn" data-project="animation-system">
+                                <i class="fa-solid fa-film"></i> View Animation Player
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: BPO CRM Portal -->
+                <div class="project-card" data-category="bpo">
+                    <div class="project-img-wrapper">
+                        <img src="assets/bpo-crm.jpg" alt="BPO Sales CRM Portal" class="project-img">
+                        <div class="project-badge">Enterprise Sales Tool</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>CRM Tools</span>
+                            <span>Lead Management</span>
+                            <span>KPI Analytics</span>
+                            <span>BPO Operations</span>
+                        </div>
+                        <h3 class="project-title">BPO CRM & Lead Sales Management Portal</h3>
+                        <p class="project-desc">
+                            Sales pipeline & call metrics tool based on corporate BPO experience. Manages leads, tracks deal stages, customer touchpoints, and KPI conversion rates.
+                        </p>
+                        <div class="project-actions">
+                            <button class="btn btn-primary btn-sm open-modal-btn" data-project="crm-system">
+                                <i class="fa-solid fa-chart-pie"></i> Launch Live Simulator
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Matrix Section -->
+    <section class="section skills-section" id="skills">
+        <div class="section-container">
+            <div class="section-header text-center">
+                <span class="section-tag">TECHNICAL PROFICIENCY</span>
+                <h2 class="section-title">Skills & Capabilities Matrix</h2>
+                <p class="section-subtitle">Combined technical engineering expertise, software development, and soft skills</p>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Systems & Web Development -->
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <i class="fa-solid fa-code skill-icon icon-cyan"></i>
+                        <h3>Systems & Web Development</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span>PHP / MySQL</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span>JavaScript (ES6+ / Web APIs)</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 88%;"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span>HTML5 / CSS3 / Responsive Design</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 95%;"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span>QR Code Integration & APIs</span>
+                                <span>92%</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 92%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Computer Engineering & IT Operations -->
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <i class="fa-solid fa-microchip skill-icon icon-indigo"></i>
+                        <h3>Computer Engineering & IT</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span>System Analysis & Optimization</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span>Database Handling & Maintenance</span>
+                                <span>87%</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 87%;"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span>Software Testing & Debugging</span>
+                                <span>89%</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 89%;"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span>Computer Applications & Hardware</span>
+                                <span>92%</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 92%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Digital Media & Instruction -->
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <i class="fa-solid fa-wand-magic-sparkles skill-icon icon-purple"></i>
+                        <h3>Media, Instruction & CRM</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span>2D Animation & Character Design</span>
+                                <span>92%</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 92%;"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span>IT Instruction & Mentorship</span>
+                                <span>94%</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 94%;"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span>CRM Tools & Lead Management</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span>Safety Management (SO2)</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 88%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Soft Skills Badges -->
+            <div class="soft-skills-container text-center">
+                <h4>Professional Competencies</h4>
+                <div class="skill-badges">
+                    <span class="skill-badge"><i class="fa-solid fa-brain"></i> Problem-Solving</span>
+                    <span class="skill-badge"><i class="fa-solid fa-comments"></i> Technical Communication</span>
+                    <span class="skill-badge"><i class="fa-solid fa-users"></i> Team Collaboration</span>
+                    <span class="skill-badge"><i class="fa-solid fa-clock"></i> Project Management</span>
+                    <span class="skill-badge"><i class="fa-solid fa-headset"></i> Customer Service Excellence</span>
+                    <span class="skill-badge"><i class="fa-solid fa-shield-halved"></i> Safety & Compliance</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Achievements Section -->
+    <section class="section cert-section" id="certifications">
+        <div class="section-container">
+            <div class="section-header text-center">
+                <span class="section-tag">CREDENTIALS</span>
+                <h2 class="section-title">Certifications & Achievements</h2>
+                <p class="section-subtitle">Recognized qualifications and national board passer certifications</p>
+            </div>
+
+            <div class="cert-grid">
+                <!-- Cert 1 -->
+                <div class="cert-card">
+                    <div class="cert-icon-wrapper">
+                        <i class="fa-solid fa-certificate cert-icon"></i>
+                    </div>
+                    <div class="cert-year">2025</div>
+                    <h3 class="cert-title">TESDA Animation NC II</h3>
+                    <div class="cert-issuer">TESDA National Certificate Passer</div>
+                    <p class="cert-desc">
+                        Certified competent in producing 2D digital animations, keyframe design, character turnarounds, and multimedia post-production.
+                    </p>
+                    <div class="cert-badge-tag"><i class="fa-solid fa-check"></i> National Certification</div>
+                </div>
+
+                <!-- Cert 2 -->
+                <div class="cert-card highlight-cert">
+                    <div class="cert-icon-wrapper">
+                        <i class="fa-solid fa-award cert-icon"></i>
+                    </div>
+                    <div class="cert-year">2025</div>
+                    <h3 class="cert-title">CSE Professional Level Passer</h3>
+                    <div class="cert-issuer">Civil Service Commission (CSC)</div>
+                    <p class="cert-desc">
+                        Eligible for professional and technical roles in public and government service, demonstrating high competence in analytical reasoning and professional ethics.
+                    </p>
+                    <div class="cert-badge-tag"><i class="fa-solid fa-check"></i> Civil Service Eligibility</div>
+                </div>
+
+                <!-- Cert 3 -->
+                <div class="cert-card">
+                    <div class="cert-icon-wrapper">
+                        <i class="fa-solid fa-user-shield cert-icon"></i>
+                    </div>
+                    <div class="cert-year">2025</div>
+                    <h3 class="cert-title">Certified Safety Officer 2 (SO2)</h3>
+                    <div class="cert-issuer">DOLE Accredited Training</div>
+                    <p class="cert-desc">
+                        Qualified Safety Officer 2 trained in occupational safety, hazard identification, risk assessment, and workplace safety compliance.
+                    </p>
+                    <div class="cert-badge-tag"><i class="fa-solid fa-check"></i> DOLE Accredited</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional References Section -->
+    <section class="section references-section" id="references">
+        <div class="section-container">
+            <div class="section-header text-center">
+                <span class="section-tag">RECOMMENDATIONS</span>
+                <h2 class="section-title">Professional References</h2>
+                <p class="section-subtitle">Academic mentors and professors from Southern Luzon State University</p>
+            </div>
+
+            <div class="references-grid">
+                <!-- Reference 1 -->
+                <div class="ref-card">
+                    <div class="ref-header">
+                        <div class="ref-avatar"><i class="fa-solid fa-user-tie"></i></div>
+                        <div>
+                            <h3 class="ref-name">Engr. Jerwin Obmerga</h3>
+                            <div class="ref-role">Professor, College of Engineering</div>
+                            <div class="ref-org">Southern Luzon State University</div>
+                        </div>
+                    </div>
+                    <div class="ref-contact">
+                        <div class="ref-info-line">
+                            <i class="fa-solid fa-phone"></i> <span>0905-429-8428</span>
+                        </div>
+                        <div class="ref-info-line">
+                            <i class="fa-solid fa-envelope"></i> <span>jobmerga@slsu.edu.ph</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reference 2 -->
+                <div class="ref-card">
+                    <div class="ref-header">
+                        <div class="ref-avatar"><i class="fa-solid fa-user-graduate"></i></div>
+                        <div>
+                            <h3 class="ref-name">Dr. Renato R. Maaliw III</h3>
+                            <div class="ref-role">Professor, College of Engineering</div>
+                            <div class="ref-org">Southern Luzon State University</div>
+                        </div>
+                    </div>
+                    <div class="ref-contact">
+                        <div class="ref-info-line">
+                            <i class="fa-solid fa-phone"></i> <span>0998-900-1045</span>
+                        </div>
+                        <div class="ref-info-line">
+                            <i class="fa-solid fa-envelope"></i> <span>rmaaliw@slsu.edu.ph</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Hire Me Section -->
+    <section class="section contact-section" id="contact">
+        <div class="section-container">
+            <div class="section-header text-center">
+                <span class="section-tag">GET IN TOUCH</span>
+                <h2 class="section-title">Contact & Hire Krystell</h2>
+                <p class="section-subtitle">Have a project, freelance inquiry, or job opportunity? Let's build together!</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <!-- Direct Contact Info -->
+                <div class="contact-info-card">
+                    <h3>Contact Information</h3>
+                    <p>Feel free to reach out via direct phone call, email, or by filling out the message form.</p>
+
+                    <div class="contact-methods">
+                        <div class="contact-method-item" id="copy-email-btn">
+                            <div class="method-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <strong>Email Address</strong>
+                                <p>talasangabriel@gmail.com</p>
+                                <span class="copy-hint"><i class="fa-solid fa-copy"></i> Click to copy email</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-method-item" id="copy-phone-btn">
+                            <div class="method-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div>
+                                <strong>Phone Number</strong>
+                                <p>0931-946-6985</p>
+                                <span class="copy-hint"><i class="fa-solid fa-copy"></i> Click to copy phone</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-method-item">
+                            <div class="method-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <strong>Location</strong>
+                                <p>216 Adelfa St., Brgy. Lita Phase 1, Tayabas City, Quezon Province, Philippines</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="mailto:talasangabriel@gmail.com" class="social-btn" title="Send Email"><i class="fa-solid fa-paper-plane"></i> Email Me</a>
+                        <a href="tel:09319466985" class="social-btn" title="Call Me"><i class="fa-solid fa-phone"></i> Call Direct</a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-card">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="form-name">Full Name</label>
+                            <input type="text" id="form-name" required placeholder="e.g. Maria Santos">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="form-email">Email Address</label>
+                                <input type="email" id="form-email" required placeholder="client@company.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="form-subject">Inquiry Type</label>
+                                <select id="form-subject" required>
+                                    <option value="Freelance Web/MIS System">Freelance Web / MIS System Project</option>
+                                    <option value="Full-Time Engineering Role">Full-Time / Career Opportunity</option>
+                                    <option value="IT Instruction / Mentorship">IT Instruction / Training Inquiry</option>
+                                    <option value="2D Animation / Media Project">2D Animation / Media Project</option>
+                                    <option value="General Inquiry">General Inquiry</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-message">Message</label>
+                            <textarea id="form-message" rows="5" required placeholder="Describe your project, job offer, or requirement..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fa-solid fa-paper-plane"></i> Send Message to Krystell
+                        </button>
+                    </form>
+                    <div id="form-status" class="form-status-msg"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container text-center">
+            <p>&copy; 2026 <strong>Krystell F. San Gabriel</strong>. Computer Engineer & IT Educator Portfolio.</p>
+            <p class="footer-subtext">Designed with precision for clients, employers, and technical collaborators.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL POPUPS FOR LIVE SIMULATORS -->
+
+    <!-- Modal 1: QR Code System Simulator -->
+    <div class="modal-overlay" id="modal-qr-system">
+        <div class="modal-card">
+            <button class="modal-close-btn">&times;</button>
+            <div class="modal-header">
+                <i class="fa-solid fa-qrcode modal-icon"></i>
+                <div>
+                    <h3>QR Code Student Enrollment System (Live Simulator)</h3>
+                    <p>Interactive demonstration of student QR pass creation and scanner logging</p>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="sim-grid">
+                    <div class="sim-box">
+                        <h4>Step 1: Student Enrollment Generator</h4>
+                        <div class="form-group">
+                            <label>Student ID Number</label>
+                            <input type="text" id="sim-qr-id" value="SLSU-2025-0842">
+                        </div>
+                        <div class="form-group">
+                            <label>Full Student Name</label>
+                            <input type="text" id="sim-qr-name" value="Juan Dela Cruz">
+                        </div>
+                        <div class="form-group">
+                            <label>Program / Course</label>
+                            <input type="text" id="sim-qr-course" value="B.S. Information Technology">
+                        </div>
+                        <button class="btn btn-primary btn-block" id="sim-qr-generate">
+                            <i class="fa-solid fa-qrcode"></i> Generate QR Enrollment Pass
+                        </button>
+                    </div>
+
+                    <div class="sim-box text-center">
+                        <h4>Generated Student QR Pass</h4>
+                        <div id="sim-qrcode-display" class="qr-output-box"></div>
+                        <p id="sim-qr-status-text" class="qr-status-label">Ready to scan student pass</p>
+                        <button class="btn btn-secondary btn-block" id="sim-qr-scan">
+                            <i class="fa-solid fa-barcode"></i> Simulate QR Scanner Swipe
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sim-log-section">
+                    <h4>MIS Database Entry Logs</h4>
+                    <table class="sim-table">
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>Student ID</th>
+                                <th>Name</th>
+                                <th>Program</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="sim-qr-log-table">
+                            <tr>
+                                <td>10:35 AM</td>
+                                <td>SLSU-2024-0112</td>
+                                <td>Anna Reyes</td>
+                                <td>B.S. Computer Engineering</td>
+                                <td><span class="badge-success">Enrolled & Verified</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Instructor Evaluation Simulator -->
+    <div class="modal-overlay" id="modal-eval-system">
+        <div class="modal-card">
+            <button class="modal-close-btn">&times;</button>
+            <div class="modal-header">
+                <i class="fa-solid fa-chart-line modal-icon"></i>
+                <div>
+                    <h3>Instructor Evaluation & Performance Analytics</h3>
+                    <p>Live scoring sliders and automated Chart.js analytics engine</p>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="sim-grid">
+                    <div class="sim-box">
+                        <h4>Student Evaluation Entry</h4>
+                        <div class="slider-group">
+                            <label>Subject Mastery & Teaching Skill: <strong id="val-criteria-1">5</strong>/5</label>
+                            <input type="range" min="1" max="5" value="5" id="slider-criteria-1">
+                        </div>
+                        <div class="slider-group">
+                            <label>Classroom Management & Punctuality: <strong id="val-criteria-2">5</strong>/5</label>
+                            <input type="range" min="1" max="5" value="5" id="slider-criteria-2">
+                        </div>
+                        <div class="slider-group">
+                            <label>Learning Materials & Lab Exercises: <strong id="val-criteria-3">4</strong>/5</label>
+                            <input type="range" min="1" max="5" value="4" id="slider-criteria-3">
+                        </div>
+                        <div class="slider-group">
+                            <label>Student Approachability & Mentorship: <strong id="val-criteria-4">5</strong>/5</label>
+                            <input type="range" min="1" max="5" value="5" id="slider-criteria-4">
+                        </div>
+                        <button class="btn btn-primary btn-block" id="btn-recalc-eval">
+                            <i class="fa-solid fa-arrows-rotate"></i> Recalculate Metrics
+                        </button>
+                    </div>
+
+                    <div class="sim-box">
+                        <h4>Faculty Rating Analytics Chart</h4>
+                        <div class="chart-wrapper">
+                            <canvas id="eval-chart-canvas"></canvas>
+                        </div>
+                        <div class="overall-rating-card">
+                            <span>Overall Calculated Score:</span>
+                            <strong id="eval-overall-score">4.75 / 5.00 (Outstanding)</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: TESDA Animation Player -->
+    <div class="modal-overlay" id="modal-animation-system">
+        <div class="modal-card">
+            <button class="modal-close-btn">&times;</button>
+            <div class="modal-header">
+                <i class="fa-solid fa-film modal-icon"></i>
+                <div>
+                    <h3>TESDA Animation NC II Interactive Suite</h3>
+                    <p>2D digital character keyframes, turnarounds, and frame control</p>
+                </div>
+            </div>
+            <div class="modal-body text-center">
+                <div class="anim-player-box">
+                    <img src="assets/animation-showcase.jpg" alt="2D Animation Frame" id="anim-frame-img" class="anim-img">
+                    <div class="anim-controls">
+                        <button class="btn btn-secondary" id="btn-anim-prev"><i class="fa-solid fa-step-backward"></i> Prev Frame</button>
+                        <button class="btn btn-primary" id="btn-anim-play"><i class="fa-solid fa-play"></i> Toggle Auto-Play</button>
+                        <button class="btn btn-secondary" id="btn-anim-next">Next Frame <i class="fa-solid fa-step-forward"></i></button>
+                    </div>
+                    <div class="anim-status" id="anim-status-text">Frame 1 of 4: Character Turnaround Concept</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4: BPO CRM Simulator -->
+    <div class="modal-overlay" id="modal-crm-system">
+        <div class="modal-card">
+            <button class="modal-close-btn">&times;</button>
+            <div class="modal-header">
+                <i class="fa-solid fa-chart-pie modal-icon"></i>
+                <div>
+                    <h3>BPO CRM & Lead Sales Management Simulator</h3>
+                    <p>Track client leads, sales target KPIs, and deal statuses</p>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="crm-stats-row">
+                    <div class="crm-stat">
+                        <span>Total Inbound Leads</span>
+                        <strong id="crm-total-leads">142</strong>
+                    </div>
+                    <div class="crm-stat">
+                        <span>Deals Closed</span>
+                        <strong id="crm-closed-deals">38</strong>
+                    </div>
+                    <div class="crm-stat">
+                        <span>Conversion Rate</span>
+                        <strong id="crm-conv-rate">26.8%</strong>
+                    </div>
+                    <div class="crm-stat">
+                        <span>Target KPI Achieved</span>
+                        <strong id="crm-kpi-target" class="text-green">112% Exceeded</strong>
+                    </div>
+                </div>
+
+                <div class="sim-box" style="margin-top:20px;">
+                    <h4>Quick Lead Action</h4>
+                    <div class="form-row">
+                        <input type="text" id="crm-new-lead-name" placeholder="Client / Lead Name">
+                        <select id="crm-new-lead-status">
+                            <option value="New Lead">New Lead</option>
+                            <option value="Qualified">Qualified</option>
+                            <option value="Proposal Sent">Proposal Sent</option>
+                            <option value="Closed Won">Closed Won</option>
+                        </select>
+                        <button class="btn btn-primary" id="btn-add-crm-lead"><i class="fa-solid fa-plus"></i> Add Lead</button>
+                    </div>
+                    
+                    <table class="sim-table" style="margin-top:15px;">
+                        <thead>
+                            <tr>
+                                <th>Client Name</th>
+                                <th>Deal Value</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="crm-leads-table">
+                            <tr>
+                                <td>Apex Corp Solutions</td>
+                                <td>$4,500</td>
+                                <td><span class="badge-success">Closed Won</span></td>
+                                <td><button class="btn btn-xs btn-outline">Call Log</button></td>
+                            </tr>
+                            <tr>
+                                <td>Global Tech Enterprise</td>
+                                <td>$8,200</td>
+                                <td><span class="badge-warning">Proposal Sent</span></td>
+                                <td><button class="btn btn-xs btn-outline">Call Log</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5: Resume Preview Modal -->
+    <div class="modal-overlay" id="modal-resume">
+        <div class="modal-card modal-lg">
+            <button class="modal-close-btn">&times;</button>
+            <div class="modal-header">
+                <i class="fa-solid fa-file-pdf modal-icon"></i>
+                <div>
+                    <h3>Krystell F. San Gabriel - Resume Preview</h3>
+                    <p>Official Resume Document (Computer Engineer & IT Educator)</p>
+                </div>
+            </div>
+            <div class="modal-body text-center">
+                <iframe src="San Gabriel_Resume.pdf" class="resume-iframe" title="Resume Viewer"></iframe>
+                <div style="margin-top: 15px;">
+                    <a href="San Gabriel_Resume.pdf" download class="btn btn-primary">
+                        <i class="fa-solid fa-download"></i> Download PDF Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
